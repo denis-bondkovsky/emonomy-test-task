@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Emonomy test task",
     "description": "",
-    "version": "1",
+    "version": "0.0.1",
     "action": {
         "default_popup": "hello.html",
         "default_icon": "assets/app_icon.png"
