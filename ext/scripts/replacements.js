@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:8003/api/v1'
+// const API_URL = 'http://localhost:8003/api/v1'
+const API_URL = 'http://5.187.7.184/api/v1'
 
 const replacementElementMap = {
     image: 'img',
@@ -6,7 +7,6 @@ const replacementElementMap = {
 }
 
 const replacedElements = []
-// const API_URL = 'http://5.187.7.184/api/v1'
 
 /**
  * Replace content in html element with response from backend
