@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 # python requirements
 RUN pip install --upgrade pip
-COPY ./requirements.txt .
+COPY ./backend/requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
 
 # copy project
