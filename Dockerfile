@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 # copy project
 COPY . .
 
-ENTRYPOINT [ "uvicorn", "backend.entrypoint:app" ]
+ENTRYPOINT [ "uvicorn", "backend.entrypoint:app", "--host", "0.0.0.0" ]
