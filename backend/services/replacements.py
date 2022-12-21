@@ -15,8 +15,10 @@ async def get_replacement_url(ad_banner_url: str):
 
             body = await response.read()
 
-            content_type = magic.Magic(mime=True).from_buffer(body)
+            content_type = magic.Magic(mime=True).from_buffer(body) \
+                .split('/')[0]
     finally:
         await session.close()
 
-    return replacements_map.get(content_type.split('/')[0])
+    return replacements_map.get(content_type) or replacements_map['image'], \
+        content_type

@@ -15,9 +15,9 @@ router = APIRouter(
 @router.post('/')
 async def replace(ad_banner: AdBanner):
     try:
-        replacements_url = await get_replacement_url(ad_banner.media_url)
+        replacements_url, content_type = await get_replacement_url(ad_banner.media_url)
     except Exception as exp:
         traceback.print_exc()
         raise HTTPException(400, str(exp))
 
-    return { 'url': replacements_url }
+    return { 'url': replacements_url, 'content_type': content_type }
